@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables</h1>
+</body>
+<script>
+            // Crear dues variables que tenguin cada una numero enter diferent 
+            var enter1=25
+            var enter2=5
+            // dues variables aue tenguin dos decimals diferent
+            var decimal1 = 1.25
+            var decimal2 = 5.35
+
+            // Fer servir el console log per veure la suma
+            // del parrel variables
+
+            var sumaEnter = enter1 + enter2
+            console.log("Els enters sumen",sumaEnter)
+
+            console.log("Els decimals sumen ",decimal1+decimal2)
+
+            // Fer una funcio 
+            // + 1 parametre d'entrada o argument
+            // Ens diu de quina tipus es i imprimeix el valor de l'argument
+            
+            function tipusDeVariables(entrada) {
+                console.log(
+                    "La variable d'entrada es del tipus "
+                    + typeof(entrada) 
+                    + " i te el valor "
+                    +entrada
+                )
+            }
+
+            tipusDeVariables("Hola")
+            tipusDeVariables(enter1)
+            tipusDeVariables(enter1)
+            tipusDeVariables(decimal2)
+            tipusDeVariables({})
+            tipusDeVariables([])
+            tipusDeVariables(false)
+console.clear()
+             // Fer 4 funcios, la de la suma, restar, multiplicacio i la dividir
+             // i probar-les
+             
+             var a = 20
+             var b = 5
+
+             function suma1(a,b){
+                        return a + b
+             }
+
+             function restrar(a,b){
+                return a - b
+             }
+
+             function multiplicar(a,b){
+                return a * b
+             }
+
+             function dividir(a,b){
+                return a / b
+             }
+
+             console.log(suma1(enter1,enter2))
+
+            console.log(restrar(decimal1,decimal2))
+            console.log(multiplicar(enter1,enter2))
+            console.log(dividir(enter1,enter2))
+
+
+
+</script>
+</html>
