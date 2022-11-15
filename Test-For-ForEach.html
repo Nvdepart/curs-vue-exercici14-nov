@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Exemple Statement for - forEach
+    </h1>
+    <p id="demo"></p>
+   
+   <script>
+            var cities=["Madrid", "San Francisco", "Barcelona","Girona"];
+
+            for(value of cities){
+                document.write(value + "<br>");
+            }
+
+            cities.forEach(function(val, i, arr){
+                document.write(i +": "+val+"<br>");
+            })
+    </script>
+   
+
+
+</body>
+
+<script>
+var fruits=["apple","orange","banana","mango","pear","strawberry"];
+var html="";
+
+for(var i=0;i<fruits.length;i++){
+    html+="<p>"+fruits[i]+"</p>";
+}
+document.getElementById("demo").innerHTML=html;
+</script>
+</html>
