@@ -1,0 +1,53 @@
+<!-- 
+
+    - Recorrer un array i fer alguna cosa a cada elemet
+    - Trobar algun element dins un array
+    - Fer alguna cosa  amb tots els elements de l'array i tornar-ho
+-->
+
+<script>
+        for (var i = 0; i <5;i++){
+            console.log(i)
+        }
+        
+
+        console.log("----------")
+
+        var noms = ["Jordi","Laura","Kris","Maria"]
+        for (i =0; i < noms.length; i++) {
+            var nom = noms[i]
+            console.log("el nom es ",nom)
+            console.log(" el tipus de aquest nom es ",typeof(nom))
+        }
+        console.log("--------")
+
+        var numeros = [23,100,15,7,20]
+        var numeroMesPetit = 1000
+        for (i =0; i < numeros.length; i++) {
+            var numero = numeros[i]
+            if(numero < numeroMesPetit) {
+                numeroMesPetit = numero
+            }
+        }
+        console.log("el numero mes petit es ",numeroMesPetit)
+        console.log("--------")
+       
+        var minim = 100000
+        numeros.forEach(
+            function(el,pos,arr){
+                    if (el<minim){
+                        minim= el
+                    }
+            })
+            console.log("el numero mes petit es ",minim)
+
+            console.log("--------")
+            var edats = [23,32,15,26,42,34]
+            var edatTotal = 0
+            edats.forEach(function(el, i, arr){
+            edatTotal += el
+            })
+            console.log(edatTotal)
+            var edatMitjana = edatTotal / edats.length
+            console.log(edatMitjana)
+</script>

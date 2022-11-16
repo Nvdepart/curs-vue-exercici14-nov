@@ -1,0 +1,124 @@
+<!-- 
+    for & forEach
+    
+-->
+<script>
+var noms = []
+    noms.push("Jordi")
+    noms.push("Eva")
+    noms.push("Dani")
+    noms.push({})
+    noms.push(35.5)
+    noms.push("Pere")
+    noms.push("Jordi")
+    noms.push("Laura")
+
+    // Escriure quants caracters te cada nom 
+    // i el nom en un for i després en un foreach
+    console.log(noms)
+
+    for(
+        var posicioDelNom = 0; 
+        posicioDelNom < noms.length;
+        posicioDelNom++
+        ){           
+            // Agafem el valor
+            var nomActual = noms[posicioDelNom]
+            if (typeof(nomActual) == "string"){
+                //Contem caracters
+                var nombreDeCaracters = nomActual.length
+                console.log(
+                    "El nom " 
+                    + nomActual 
+                    + " té " 
+                    + nombreDeCaracters
+                    + " caràcters."
+                )
+            }else{
+                console.log("Es una altra cosa")
+            } 
+    }
+
+    
+
+    noms.forEach((el)=>{
+        if(typeof(el)=="string"){
+            console.log("El nom " + el + " té " + el.length + " caràcters.")
+        }
+    })
+
+    var suma = (a,b)=>{
+        return a+b
+    }
+    
+  
+
+    console.log(noms)
+    console.log(noms.indexOf("Jordi"))
+    
+
+    noms.forEach(function(el,pos,arr){
+
+    })
+
+    noms.forEach((el,pos,arr)=>{
+        console.log(
+            "L'element és " + el + "la posicio es "+pos+" i l'array te"
+            +arr.length+" elements"
+        )
+    })
+    console.clear()
+
+
+    var excel = [
+        [10,12,14,1,20,3], [2,1,19,11,2,32], [40,12,200,2,42,31],
+    ]
+    
+    var sumatori = 0
+    for(var fila = 0; fila < excel.length;fila++){
+        // Recuperem l'element actual
+        var el = excel[fila]
+        for(var columna = 0; columna < el.length;columna++){
+            var valor = el[columna]
+            sumatori = sumatori + valor
+           
+        }
+    }
+
+    console.clear()
+
+    var sumatori2 = 0
+    excel.forEach(fila=>{
+        fila.forEach(columna=>{
+            sumatori2 += columna
+        })
+    })
+
+
+    console.log(sumatori2)
+
+    console.clear()
+
+    var pacients2 = []
+    
+    pacients2.push({
+        nom:"Jordi",
+        febre:35
+    })
+    pacients2.push({nom:"Laura",febre:36.5})
+    pacients2.push({nom:"Pere",febre:39.5})
+
+    console.log(pacients2)
+
+    pacients2.forEach((pacient,i,pacients)=>{
+            console.log("Estem mirant el pacient",pacient.nom)
+            console.log("El pacient te la febre a",pacient.febre)
+            console.log("Hi ha ",pacients.length," pacients.")
+            var seguentPacient = pacients[i+1]
+            if(seguentPacient){
+                console.log("El seguent pacient és ",seguentPacient.nom)
+            }
+    })
+
+
+</script>
