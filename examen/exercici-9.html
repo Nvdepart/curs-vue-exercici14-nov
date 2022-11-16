@@ -1,0 +1,24 @@
+<!--
+    Pregunta 9
+    1. Contar i escriure a la consola
+    quantes cadenes de text hi ha en un array
+-->
+
+<script>
+    var textes = ["Jordi",32,"Pere","Arbre","Finestra",200,"200"]
+    var numeroDeTextes = 0
+    // Hem de recorrer tot l'array
+    textes.forEach((el)=>{
+        // Mirar si l'element actual és del tipu "string" (typeof)
+        var esDelTipuString = typeof(el) == "string"
+        if(esDelTipuString){
+            // Si és del tipu string, accumular-ho en un contador.
+            numeroDeTextes++
+        }
+    })
+
+    console.log("Hi ha ",numeroDeTextes," textes")
+    
+
+
+</script>

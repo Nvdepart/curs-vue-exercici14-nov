@@ -1,0 +1,25 @@
+<!--
+    Pregunta 4
+    1. Fer una funció que tingui un parametre d'entrada (dollars)
+    i torni el valor en euros (multiplicar per 1.2)
+    2. Mostrar el resultat per la consola
+-->
+
+<script>
+        
+        function changeDollarToEuro(dollars) {
+            return dollars*1.2
+        }
+console.log(changeDollarToEuro(10))
+var valorEuro = changeDollarToEuro(200)
+console.log(valorEuro)
+
+function convertDE(dollars,ratio=1.2,comissio=0.2){
+        return dollars*ratio
+    }
+
+    console.log(convertDE(100))
+    console.log(convertDE(100,0.9))
+
+
+</script>
