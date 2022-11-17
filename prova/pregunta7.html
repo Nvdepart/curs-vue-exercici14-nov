@@ -1,0 +1,34 @@
+<!-- 
+
+    Pregunta-7
+
+    1. Escriu a la consola les posicio 
+-->
+<script>
+
+    var noms = ["Jordi","Laura",34,[],"Pere",{},1]
+
+    noms.forEach(
+        function(el,pos,arr) {
+            // Recollim el tipus de variable
+            var tipusElement = typeof(el)
+            console.log(tipusElement)
+            // Mirems si es un string
+            if(tipusElement =="string"){
+                console.log("La posicio es ", pos)
+            }
+        }
+    )
+
+    for ( i=0; i <noms.length; i++){
+        // Recollim l'element
+        var element = noms[i]
+        
+        // mirem si es un string
+        var esUnString = typeof(element) == "string"
+
+        if(esUnString){
+            console.log("La posicio es",i)
+        }
+    }
+</script>
